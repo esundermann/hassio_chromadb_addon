@@ -1,6 +1,9 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+
 # Install requirements for add-on
 RUN \
   apk add --no-cache \
@@ -12,4 +15,4 @@ WORKDIR /chroma_data
 
 
 COPY server.py .
-CMD ["uvicorn", "server:app", "--port", "8000"]
+CMD ["uvicorn", "server:app","--host", "0.0.0.0", "--port", "8000"]
