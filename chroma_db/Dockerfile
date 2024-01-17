@@ -8,9 +8,9 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
   apk add --no-cache \
     python3
-RUN pip install uvicorn
-RUN pip install chromadb 
-RUN pip install --force-reinstall fastapi==0.85.1
+RUN pip3 install uvicorn
+RUN pip3 install chromadb 
+RUN pip3 install --force-reinstall fastapi==0.85.1
 WORKDIR /chroma_data
 
 
