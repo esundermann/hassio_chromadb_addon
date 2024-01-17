@@ -5,12 +5,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 # Install requirements for add-on
-RUN \
+RUN apt update && apt install -y \
   apk add --no-cache \
-    python3
-RUN pip3 install uvicorn
-RUN pip3 install chromadb 
-RUN pip3 install --force-reinstall fastapi==0.85.1
+    python3 \
+    python3-pip
+
+RUN pip install uvicorn
+RUN pip install chromadb 
+RUN pip install --force-reinstall fastapi==0.85.1
 WORKDIR /chroma_data
 
 
