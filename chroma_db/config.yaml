@@ -9,6 +9,6 @@ arch:
   - armhf
   - armv7
 ports:
-  - 8000/tcp: 8000
+  8000/tcp: 8000
 hassio_api: true
 startup: services
