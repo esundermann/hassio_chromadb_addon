@@ -1,0 +1,14 @@
+name: "ChromaDB"
+description: "Vector Database Server for your Smart Home"
+version: "0.4.22"
+slug: "chromadb"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+ports:
+  - 8000/tcp:8000
+hassio_api: true
+startup: services
